@@ -8,11 +8,62 @@
     */
 
     //ENTRADA
-
+    const numero1=Number(prompt(`Insira um número: `).trim().replace(",","."));
+    const numero2=Number(prompt(`Insira outro número: `).trim().replace(",","."));
+    const operaçao=prompt(`Insira uma operação (* , / , + ou -): `).trim();
 
     //PROCESSAMENTO
-
+    let resultado= 0
+    switch (operaçao) {
+        case "*": 
+         resultado= numero1*numero2;
+            break;
+        
+        case "/":
+        resultado= numero1/numero2;
+            break;
+        case "-":
+        resultado= numero1-numero2;
+            break;
+        case "+":
+        resultado= numero1+numero2;
+            break;
+        default:
+            break;
+    }
     
+    let mensagemfinal= "o número é: "
+
+    switch (resultado % 2) {
+        case 0: 
+        mensagemfinal= mensagemfinal + "Par, ";
+        break;
+    default: 
+    mensagemfinal= mensagemfinal + "Ímpar, ";
+        break;
+    }
+
+    switch (resultado- Math.floor(resultado)) {
+    case 0: 
+    mensagemfinal= mensagemfinal + "Inteiro e ";
+        break;
+    default: 
+    mensagemfinal= mensagemfinal + "Decimal e ";
+        break;
+}
+
+let mensagemfinal= "o número é: "
+
+switch (resultado<0) {
+    case true: 
+    mensagemfinal= mensagemfinal + "n";
+    break;
+default: 
+    mensagemfinal= mensagemfinal + "p";
+    break;
+}
+    alert(` ${mensagemfinal}`)
+
     //SAÍDA
 
 </script>
