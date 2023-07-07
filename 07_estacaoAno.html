@@ -6,9 +6,60 @@
     */
 
     //ENTRADA
+    const hemisferio= prompt(`Qual é o hemisfério? Insira N para norte e S para sul:`).toUpperCase().trim();
+    const mes= prompt(`Qual é o mês atual? Insira o nome completo do mês:`).toUpperCase().trim();
 
-    
     //PROCESSAMENTO
+
+                switch(hemisferio) {
+                    case "N":
+                        switch (mes) {
+                            case "JANEIRO":
+                            case "FEVEREIRO":
+                            case "MARÇO":
+                                alert(`Hemisfério: Norte \nInverno`);
+                                break;
+                            case "ABRIL":
+                            case "MAIO":
+                            case "JUNHO":
+                                alert(`Hemisfério: Norte \nPrimavera`);
+                                break;
+                            case "JULHO":
+                            case "AGOSTO":
+                            case "SETEMBRO":
+                               alert("Hemisfério: Norte\nVerão ");
+                               break;
+                            case "OUTUBRO":
+                            case "NOVEMBRO":
+                            case "DEZEMBRO":
+                                alert(`Hemisfério: Norte\nOutono`);
+                        }
+                }
+                switch(hemisferio) {
+                    case "S":
+                        switch (mes) {
+                            case "JANEIRO":
+                            case "FEVEREIRO":
+                            case "MARÇO":
+                                alert(`Hemisfério: Sul \nVerão`);
+                                break;
+                            case "ABRIL":
+                            case "MAIO":
+                            case "JUNHO":
+                                alert(`Hemisfério: Sul \nOutono`);
+                                break;
+                            case "JULHO":
+                            case "AGOSTO":
+                            case "SETEMBRO":
+                               alert("Hemisfério: Sul \nInverno ");
+                               break;
+                            case "OUTUBRO":
+                            case "NOVEMBRO":
+                            case "DEZEMBRO":
+                                alert(`Hemisfério: Sul \nPrimavera`);
+                        }
+                }
+
 
 
     //SAÍDA

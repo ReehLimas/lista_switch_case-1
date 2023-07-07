@@ -36,30 +36,28 @@
 
     switch (resultado % 2) {
         case 0: 
-        mensagemfinal= mensagemfinal + "Par, ";
+        mensagemfinal += mensagemfinal + "Par, ";
         break;
     default: 
-    mensagemfinal= mensagemfinal + "Ímpar, ";
+    mensagemfinal += mensagemfinal + "Ímpar, ";
         break;
     }
 
     switch (resultado- Math.floor(resultado)) {
     case 0: 
-    mensagemfinal= mensagemfinal + "Inteiro e ";
+    mensagemfinal += "Inteiro e ";
         break;
     default: 
-    mensagemfinal= mensagemfinal + "Decimal e ";
+    mensagemfinal += "Decimal e ";
         break;
 }
 
-let mensagemfinal= "o número é: "
-
 switch (resultado<0) {
     case true: 
-    mensagemfinal= mensagemfinal + "n";
+    mensagemfinal += "negativo.";
     break;
 default: 
-    mensagemfinal= mensagemfinal + "p";
+    mensagemfinal += "positivo.";
     break;
 }
     alert(` ${mensagemfinal}`)

@@ -11,11 +11,53 @@
     */
 
     //ENTRADA
-
+    const pergunta1 = prompt(`Telefonou para a vítima? S-Sim|| N-Não`).trim().toUpperCase();
+    const pergunta2 = prompt(`Esteve no local do crime? S-Sim|| N-Não`).trim().toUpperCase();
+    const pergunta3 = prompt(`Mora perto da vítima? S-Sim|| N-Não`).trim().toUpperCase();
+    const pergunta4 = prompt(`Devia para a vítima? S-Sim|| N-Não `).trim().toUpperCase();
+    const pergunta5 = prompt(`Já trabalhou com a vítima? S-Sim|| N-Não`).trim().toUpperCase();
     
     //PROCESSAMENTO
-
-
+    let soma = 0;
+    switch (pergunta1) {
+    case "S":
+        soma++;
+        break;
+}
+    switch (pergunta2) {
+    case "S":
+        soma++;
+        break;
+}
+    switch (pergunta3) {
+    case "S":
+        soma++;
+        break;
+}
+    switch (pergunta4) {
+    case "S":
+        soma++;
+        break;
+}
+    switch (pergunta5) {
+    case "S":
+        soma++;
+        break;
+}
+switch (soma) {
+    case 5:
+    alert(`Assassina`);
+        break;
+    case 4:
+    case 3:
+        alert(`Cúmplice`);
+        break;
+    case 2:
+        alert(`Suspeita`);
+        break;
+    default:
+        alert(`Inocente`) 
+}
     //SAÍDA
 
 </script>
